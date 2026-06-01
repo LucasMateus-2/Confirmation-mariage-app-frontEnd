@@ -1,0 +1,153 @@
+/* src/assets/css/glass-theme.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html,
+body,
+#app {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* --- Contêiner Principal (Mantendo sua estrutura de fundo) --- */
+.auth-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('../img/fundoflores-1920.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /*background: linear-gradient(
+    135deg,
+    rgba(255, 182, 193, 0.25) 0%,
+    rgba(107, 142, 35, 0.15) 100%
+  );*/
+  z-index: 1;
+}
+
+/* --- O Card com a Estrutura Exata do seu ".container-glass" --- */
+.glass-card {
+  background:  rgba(255, 182, 193, 0.1) !important; /* Igualzinho ao seu código */
+  border-radius: 16px; /* Ajustado para os 16px do seu exemplo */
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Igualzinho ao seu código */
+  backdrop-filter: blur(12px) !important; /* Exatos 12px da imagem */
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important; /* Exata sombra do exemplo */
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Elementos Internos Adaptados para o Verde Oliva --- */
+.cursive-font {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.glass-card h2,
+.glass-card h3,
+.glass-card h5 {
+  color: #000000 !important; /* Títulos em Verde Oliva */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.glass-input-group label {
+  color: #4a6318 !important; /* Oliva profundo para leitura perfeita */
+  font-weight: 600;
+}
+
+/* --- Inputs e Botão do Olhinho Baseados no seu ".btn-glass" --- */
+.glass-input-group .input-group-text {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #6b8e23;
+}
+
+.glass-input-group .form-control {
+  background: rgba(255, 255, 255, 0.15); /* Mesma transparência do vidro */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #3b5210;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-input-group .form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #6b8e23;
+  color: #3b5210;
+  box-shadow: 0 4px 15px rgba(107, 142, 35, 0.15);
+}
+
+.glass-input-group .form-control::placeholder {
+  color: rgba(107, 142, 35, 0.55);
+}
+
+.glass-input-group .btn-eye {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: none;
+  color: #6b8e23;
+}
+
+.glass-input-group .btn-eye:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Botão Principal baseado no seu ".btn-glass" (Mas Sólido Oliva para Chamar Atenção) --- */
+.btn-glass-primary {
+  background: #6b8e23; /* Fundo sólido para destacar a ação principal */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(107, 142, 35, 0.2);
+}
+
+.btn-glass-primary:hover {
+  background: #7da028;
+  transform: scale(1.02); /* Suave crescimento baseado no seu efeito hover */
+  box-shadow: 0 6px 20px rgba(107, 142, 35, 0.3);
+}
+
+/* --- Links e Textos de Rodapé --- */
+.glass-card a {
+  color: #6b8e23 !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.glass-card a:hover {
+  color: #4a6318 !important;
+  text-decoration: underline;
+}
+
+.glass-card p,
+.glass-card span,
+.glass-card small {
+  color: #4a6318 !important;
+}
+
+.glass-divider {
+  border-color: rgba(107, 142, 35, 0.20);
+}
