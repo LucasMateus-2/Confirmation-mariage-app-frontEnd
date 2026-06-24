@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import './assets/css/glass-theme.css'
-
+import './assets/css/RspForm.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
